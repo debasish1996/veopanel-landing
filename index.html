@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VeoPanel by Bloc-Verse</title>
+    <meta
+      name="description"
+      content="VeoPanel is a Chrome extension by Bloc-Verse that adds a practical floating control panel to HTML5 video players."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="VeoPanel home">
+          <span class="brand-icon">B</span>
+          <span class="brand-copy">
+            <strong>VeoPanel</strong>
+            <small>by Bloc-Verse</small>
+          </span>
+        </a>
+
+        <nav class="topnav" aria-label="Main navigation">
+          <a href="#install">Install</a>
+          <a href="#use">How to Use</a>
+          <a href="#features">Features</a>
+          <a href="#hotkeys">Hotkeys</a>
+        </nav>
+
+        <a class="button" href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip">Download ZIP</a>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="label">Chrome extension for HTML5 video controls</p>
+            <div class="badge-row" aria-label="Release status">
+              <span class="badge badge-primary">Early Access</span>
+              <span class="badge">Manual ZIP Install</span>
+              <span class="badge">Chrome Web Store Soon</span>
+            </div>
+            <h1>VeoPanel adds back the controls some sites remove.</h1>
+            <p class="lead">
+              It injects a floating panel on pages with an HTML5
+              <code>&lt;video&gt;</code> element so you can jump back, jump
+              forward, play, pause, and use keyboard shortcuts without relying on
+              the site's player UI.
+            </p>
+            <p class="sublead">
+              This is an early access release. We are shipping direct downloads
+              first, with a Chrome Web Store launch planned soon while we keep
+              improving the extension and adding more features.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button" href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip">Download ZIP</a>
+              <a class="button button-secondary" href="#install">Manual Install Guide</a>
+            </div>
+
+            <div class="summary-grid">
+              <div class="summary-card">
+                <strong>Install</strong>
+                <span>Download ZIP, extract it, then use Load unpacked in Chrome.</span>
+              </div>
+              <div class="summary-card">
+                <strong>Status</strong>
+                <span>Early access release with manual install for now and store launch coming soon.</span>
+              </div>
+              <div class="summary-card">
+                <strong>Roadmap</strong>
+                <span>More controls, better site coverage, and ongoing polish are already planned.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel" aria-hidden="true">
+            <div class="panel-window">
+              <div class="panel-head">
+                <div class="panel-brand">
+                  <span class="panel-badge">B</span>
+                  <div>
+                    <strong>VeoPanel</strong>
+                    <small>by Bloc-Verse</small>
+                  </div>
+                </div>
+                <div class="panel-toggle"></div>
+              </div>
+
+              <div class="panel-row two-up">
+                <div class="panel-button dark">&laquo; Back 10s</div>
+                <div class="panel-button dark">&raquo; Forward 10s</div>
+              </div>
+
+              <div class="panel-button primary wide">Play</div>
+
+              <div class="panel-block">
+                <span class="panel-label">Custom jump</span>
+                <div class="panel-input">50</div>
+              </div>
+
+              <div class="panel-row two-up">
+                <div class="panel-button subtle">- Back</div>
+                <div class="panel-button subtle">+ Forward</div>
+              </div>
+
+              <div class="panel-status">Moved -10s | 278s / 1193046:28:16</div>
+              <div class="panel-foot">Hotkeys: Left, Right, Space</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-tight" id="install">
+          <div class="section-head">
+            <p class="label">Install from ZIP</p>
+            <h2>Chrome needs the extracted folder, not the ZIP itself.</h2>
+          </div>
+
+          <div class="two-column">
+            <div class="card">
+              <ol class="steps">
+                <li>Click <strong>Download ZIP</strong> on this page.</li>
+                <li>Extract the ZIP into a normal folder on your computer.</li>
+                <li>Open <code>chrome://extensions</code> in Chrome.</li>
+                <li>Turn on <strong>Developer mode</strong> in the top-right.</li>
+                <li>Click <strong>Load unpacked</strong>.</li>
+                <li>Select the extracted <strong>VeoPanel</strong> folder.</li>
+                <li>Optional: pin the extension for faster access.</li>
+              </ol>
+            </div>
+
+            <aside class="card note-card">
+              <strong>Important</strong>
+              <p>
+                VeoPanel is currently available as an early access manual install.
+                Chrome does not install extensions directly from a ZIP file, so
+                extracting first is the expected step until the Chrome Web Store
+                release is ready.
+              </p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section" id="use">
+          <div class="section-head">
+            <p class="label">How to Use</p>
+            <h2>Open a video page and use VeoPanel as your playback layer.</h2>
+          </div>
+
+          <div class="card">
+            <ol class="steps">
+              <li>Open any webpage that contains an HTML5 video.</li>
+              <li>Click the VeoPanel extension icon in Chrome.</li>
+              <li>Use the popup to toggle the control panel on that page.</li>
+              <li>Click <strong>Back 10s</strong>, <strong>Forward 10s</strong>, or <strong>Play</strong>.</li>
+              <li>Set a custom jump amount if you want bigger or smaller seek steps.</li>
+              <li>Use the keyboard shortcuts while watching for faster control.</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="section" id="features">
+          <div class="section-head">
+            <p class="label">Features</p>
+            <h2>Focused on the controls that matter most.</h2>
+          </div>
+
+          <div class="feature-list">
+            <article class="card feature-item">
+              <h3>Floating control panel</h3>
+              <p>Shows a compact overlay on pages with an HTML5 video element.</p>
+            </article>
+            <article class="card feature-item">
+              <h3>Back and forward 10 seconds</h3>
+              <p>Quick jumps for replaying lines, skipping filler, or correcting missed moments.</p>
+            </article>
+            <article class="card feature-item">
+              <h3>Play and pause</h3>
+              <p>Keeps the main playback action easy to access even when the site UI is poor.</p>
+            </article>
+            <article class="card feature-item">
+              <h3>Custom jump amount</h3>
+              <p>Change the skip interval instead of being locked to one fixed seek step.</p>
+            </article>
+            <article class="card feature-item">
+              <h3>Popup toggle</h3>
+              <p>Enable the panel from the extension popup on the current page.</p>
+            </article>
+            <article class="card feature-item">
+              <h3>Universal HTML5 support</h3>
+              <p>Designed for standard web video players across sites, including players that hide controls.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="hotkeys">
+          <div class="section-head">
+            <p class="label">Hotkeys</p>
+            <h2>Keyboard controls built into the current release.</h2>
+          </div>
+
+          <div class="card hotkeys">
+            <div class="hotkey-row hotkey-head">
+              <span>Key</span>
+              <span>Action</span>
+            </div>
+            <div class="hotkey-row">
+              <kbd>Left</kbd>
+              <span>Jump backward 10 seconds</span>
+            </div>
+            <div class="hotkey-row">
+              <kbd>Right</kbd>
+              <span>Jump forward 10 seconds</span>
+            </div>
+            <div class="hotkey-row">
+              <kbd>Space</kbd>
+              <span>Play or pause</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-tight">
+          <div class="section-head">
+            <p class="label">Planned Improvements</p>
+            <h2>We will keep improving VeoPanel and launch it on the Chrome Web Store soon.</h2>
+          </div>
+
+          <div class="feature-list feature-list-small">
+            <article class="card feature-item">
+              <h3>Shortcut customization</h3>
+              <p>Remap keys and tailor the panel to your own playback workflow.</p>
+            </article>
+            <article class="card feature-item">
+              <h3>Better site handling</h3>
+              <p>Improve reliability on edge-case players and streaming layouts.</p>
+            </article>
+            <article class="card feature-item">
+              <h3>Cleaner popup UX</h3>
+              <p>Make enablement and settings faster to understand at a glance.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p><strong>VeoPanel</strong> by Bloc-Verse</p>
+        <p>Early access release. Manual ZIP install for now, Chrome Web Store launch soon.</p>
+      </footer>
+    </div>
+  </body>
+</html>
