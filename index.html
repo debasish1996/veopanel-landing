@@ -1,61 +1,42 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-    <!-- Primary SEO -->
-    <title>VeoPanel – Rewind Live Matches on Hotstar | Chrome Extension</title>
-    <meta
-      name="description"
-      content="VeoPanel is a free Chrome extension that adds a floating Back / Forward control panel to any HTML5 video. Perfect for Hotstar live matches where rewind is disabled — replay that six or wicket instantly."
-    />
-    <meta
-      name="keywords"
-      content="VeoPanel, Hotstar rewind extension, Chrome extension video controls, seek disabled Hotstar, live match rewind Chrome, HTML5 video controller, Bloc-Verse"
-    />
-    <meta name="author" content="Bloc-Verse" />
-    <link rel="canonical" href="https://veopanel.blocverse.dev/" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-    <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://veopanel.blocverse.dev/" />
-    <meta
-      property="og:title"
-      content="VeoPanel – Rewind Live Matches on Hotstar | Chrome Extension"
-    />
-    <meta
-      property="og:description"
-      content="Hotstar removes rewind during live matches. VeoPanel adds it back — a floating control panel for any HTML5 video in Chrome."
-    />
-    <meta
-      property="og:image"
-      content="https://veopanel.blocverse.dev/og-image.png"
-    />
-    <meta property="og:site_name" content="VeoPanel by Bloc-Verse" />
+  <!-- Primary SEO -->
+  <title>VeoPanel – Rewind Live Matches on Hotstar | Chrome Extension</title>
+  <meta name="description"
+    content="VeoPanel is a free Chrome extension that adds a floating Back / Forward control panel to any HTML5 video. Perfect for Hotstar live matches where rewind is disabled — replay that six or wicket instantly." />
+  <meta name="keywords"
+    content="VeoPanel, Hotstar rewind extension, Chrome extension video controls, seek disabled Hotstar, live match rewind Chrome, HTML5 video controller, Bloc-Verse" />
+  <meta name="author" content="Bloc-Verse" />
+  <link rel="canonical" href="https://veopanel.blocverse.dev/" />
 
-    <!-- Twitter / X Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="VeoPanel – Rewind Live Matches on Hotstar | Chrome Extension"
-    />
-    <meta
-      name="twitter:description"
-      content="Hotstar removes rewind during live matches. VeoPanel adds it back — a floating control panel for any HTML5 video in Chrome."
-    />
-    <meta
-      name="twitter:image"
-      content="https://veopanel.blocverse.dev/og-image.png"
-    />
+  <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://veopanel.blocverse.dev/" />
+  <meta property="og:title" content="VeoPanel – Rewind Live Matches on Hotstar | Chrome Extension" />
+  <meta property="og:description"
+    content="Hotstar removes rewind during live matches. VeoPanel adds it back — a floating control panel for any HTML5 video in Chrome." />
+  <meta property="og:image" content="https://veopanel.blocverse.dev/og-image.png" />
+  <meta property="og:site_name" content="VeoPanel by Bloc-Verse" />
 
-    <!-- Google Search / Indexing -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VeoPanel – Rewind Live Matches on Hotstar | Chrome Extension" />
+  <meta name="twitter:description"
+    content="Hotstar removes rewind during live matches. VeoPanel adds it back — a floating control panel for any HTML5 video in Chrome." />
+  <meta name="twitter:image" content="https://veopanel.blocverse.dev/og-image.png" />
 
-    <!-- JSON-LD Structured Data (SoftwareApplication) -->
-    <script type="application/ld+json">
+  <!-- Google Search / Indexing -->
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+
+  <!-- JSON-LD Structured Data (SoftwareApplication) -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -76,376 +57,445 @@
       }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="site">
-      <header class="topbar">
-        <a class="brand" href="#top" aria-label="VeoPanel home">
-          <span class="brand-icon">B</span>
-          <span class="brand-copy">
-            <strong>VeoPanel</strong>
-            <small>by Bloc-Verse</small>
-          </span>
-        </a>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-        <nav class="topnav" aria-label="Main navigation">
-          <a href="#hotstar">Hotstar Fix</a>
-          <a href="#install">Install</a>
-          <a href="#use">How to Use</a>
-          <a href="#features">Features</a>
-          <a href="#hotkeys">Hotkeys</a>
-        </nav>
+<body>
+  <div class="site">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="VeoPanel home">
+        <span class="brand-icon">B</span>
+        <span class="brand-copy">
+          <strong>VeoPanel</strong>
+          <small>by Bloc-Verse</small>
+        </span>
+      </a>
 
-        <a
-          class="button"
-          href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip"
-          rel="noopener noreferrer"
-          >Download ZIP</a
-        >
-      </header>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="#hotstar">Hotstar Fix</a>
+        <a href="#install">Install</a>
+        <a href="#use">How to Use</a>
+        <a href="#features">Features</a>
+        <a href="#hotkeys">Hotkeys</a>
+      </nav>
 
-      <main id="top">
-        <section class="hero hero-compact">
-          <div class="hero-copy">
+      <a class="button" href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip"
+        rel="noopener noreferrer">Download ZIP</a>
+    </header>
+
+    <main id="top">
+      <section class="hero hero-compact">
+        <div class="hero-copy">
+          <p class="label">
+            Ad Free Chrome extension &middot; HTML5 video controls
+          </p>
+          <div class="badge-row" aria-label="Release status">
+            <span class="badge badge-primary">Early Access</span>
+            <span class="badge">Manual ZIP Install</span>
+            <span class="badge">Chrome Web Store Soon</span>
+          </div>
+          <h1>VeoPanel adds back the controls some sites remove.</h1>
+          <p class="lead">
+            A floating control panel for any HTML5 video &mdash; play, pause,
+            jump back and forward even when the site&rsquo;s player locks you
+            out.
+          </p>
+          <div class="hero-actions">
+            <a class="button"
+              href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip"
+              rel="noopener noreferrer">Download ZIP</a>
+            <a class="button button-secondary" href="#install">Install Guide</a>
+          </div>
+        </div>
+
+        <div class="hero-panel" aria-hidden="true">
+          <div class="panel-window">
+            <div class="panel-head">
+              <div class="panel-brand">
+                <span class="panel-badge">B</span>
+                <div>
+                  <strong>VeoPanel</strong>
+                  <small>by Bloc-Verse</small>
+                </div>
+              </div>
+              <div class="panel-toggle">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path d="M3 5.5L8 10.5L13 5.5" stroke="#9a9cab" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="panel-row two-up">
+              <div class="panel-button dark">&laquo; Back 10s</div>
+              <div class="panel-button dark">Forward 10s &raquo;</div>
+            </div>
+
+            <div class="panel-button primary wide">Play</div>
+
+            <div class="panel-block">
+              <span class="panel-label">Custom jump</span>
+              <div class="panel-input">50</div>
+            </div>
+
+            <div class="panel-row two-up">
+              <div class="panel-button subtle">- Back</div>
+              <div class="panel-button subtle">+ Forward</div>
+            </div>
+
+            <div class="panel-status">Moved -10s | 278s / 1193046:28:16</div>
+            <div class="panel-foot">Hotkeys: Left, Right, Space</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hotstar use-case callout -->
+      <section class="section hotstar-section" id="hotstar" aria-labelledby="hotstar-heading">
+        <div class="hotstar-callout">
+          <div class="hotstar-text">
             <p class="label">
-              Ad Free Chrome extension &middot; HTML5 video controls
+              Real-world problem &middot; Hotstar live matches
             </p>
-            <div class="badge-row" aria-label="Release status">
-              <span class="badge badge-primary">Early Access</span>
-              <span class="badge">Manual ZIP Install</span>
-              <span class="badge">Chrome Web Store Soon</span>
-            </div>
-            <h1>VeoPanel adds back the controls some sites remove.</h1>
-            <p class="lead">
-              A floating control panel for any HTML5 video &mdash; play, pause,
-              jump back and forward even when the site&rsquo;s player locks you
-              out.
+            <h2 id="hotstar-heading">
+              Hotstar removes rewind during live matches. VeoPanel gives it
+              back.
+            </h2>
+            <p>
+              During live cricket and football on Hotstar, the player hides
+              the seek bar and disables forward&thinsp;/&thinsp;backward
+              scrubbing entirely. Miss a six, a wicket, or a last-minute goal?
+              You&rsquo;re stuck &mdash; there is no button to go back even a
+              few seconds.
             </p>
-            <div class="hero-actions">
-              <a
-                class="button"
-                href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip"
-                rel="noopener noreferrer"
-                >Download ZIP</a
-              >
-              <a class="button button-secondary" href="#install"
-                >Install Guide</a
-              >
-            </div>
+            <p>
+              VeoPanel bypasses the player UI entirely. It injects a draggable
+              floating panel straight onto the page with
+              <strong>Back 10s</strong>, <strong>Forward 10s</strong>, custom
+              jump amounts, and keyboard shortcuts &mdash; all working
+              independently of whatever controls Hotstar chooses to show or
+              hide.
+            </p>
+            <a class="button"
+              href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip"
+              rel="noopener noreferrer" style="margin-top: 18px; display: inline-flex">Download &amp; fix it now</a>
           </div>
-
-          <div class="hero-panel" aria-hidden="true">
-            <div class="panel-window">
-              <div class="panel-head">
-                <div class="panel-brand">
-                  <span class="panel-badge">B</span>
-                  <div>
-                    <strong>VeoPanel</strong>
-                    <small>by Bloc-Verse</small>
-                  </div>
-                </div>
-                <div class="panel-toggle">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M3 5.5L8 10.5L13 5.5"
-                      stroke="#9a9cab"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
+          <div class="hotstar-steps">
+            <div class="hotstar-step">
+              <span class="step-num">1</span>
+              <div>
+                <strong>Hotstar hides seek controls</strong>
+                <p>
+                  The native player locks down rewind, forward, and scrubbing
+                  during any live stream.
+                </p>
               </div>
-
-              <div class="panel-row two-up">
-                <div class="panel-button dark">&laquo; Back 10s</div>
-                <div class="panel-button dark">Forward 10s &raquo;</div>
-              </div>
-
-              <div class="panel-button primary wide">Play</div>
-
-              <div class="panel-block">
-                <span class="panel-label">Custom jump</span>
-                <div class="panel-input">50</div>
-              </div>
-
-              <div class="panel-row two-up">
-                <div class="panel-button subtle">- Back</div>
-                <div class="panel-button subtle">+ Forward</div>
-              </div>
-
-              <div class="panel-status">Moved -10s | 278s / 1193046:28:16</div>
-              <div class="panel-foot">Hotkeys: Left, Right, Space</div>
             </div>
-          </div>
-        </section>
-
-        <!-- Hotstar use-case callout -->
-        <section
-          class="section hotstar-section"
-          id="hotstar"
-          aria-labelledby="hotstar-heading"
-        >
-          <div class="hotstar-callout">
-            <div class="hotstar-text">
-              <p class="label">
-                Real-world problem &middot; Hotstar live matches
-              </p>
-              <h2 id="hotstar-heading">
-                Hotstar removes rewind during live matches. VeoPanel gives it
-                back.
-              </h2>
-              <p>
-                During live cricket and football on Hotstar, the player hides
-                the seek bar and disables forward&thinsp;/&thinsp;backward
-                scrubbing entirely. Miss a six, a wicket, or a last-minute goal?
-                You&rsquo;re stuck &mdash; there is no button to go back even a
-                few seconds.
-              </p>
-              <p>
-                VeoPanel bypasses the player UI entirely. It injects a draggable
-                floating panel straight onto the page with
-                <strong>Back 10s</strong>, <strong>Forward 10s</strong>, custom
-                jump amounts, and keyboard shortcuts &mdash; all working
-                independently of whatever controls Hotstar chooses to show or
-                hide.
-              </p>
-              <a
-                class="button"
-                href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip"
-                rel="noopener noreferrer"
-                style="margin-top: 18px; display: inline-flex"
-                >Download &amp; fix it now</a
-              >
+            <div class="hotstar-step">
+              <span class="step-num">2</span>
+              <div>
+                <strong>VeoPanel floats on top</strong>
+                <p>
+                  A compact overlay panel appears on the page, independent of
+                  the Hotstar player UI.
+                </p>
+              </div>
             </div>
-            <div class="hotstar-steps">
-              <div class="hotstar-step">
-                <span class="step-num">1</span>
-                <div>
-                  <strong>Hotstar hides seek controls</strong>
-                  <p>
-                    The native player locks down rewind, forward, and scrubbing
-                    during any live stream.
-                  </p>
-                </div>
-              </div>
-              <div class="hotstar-step">
-                <span class="step-num">2</span>
-                <div>
-                  <strong>VeoPanel floats on top</strong>
-                  <p>
-                    A compact overlay panel appears on the page, independent of
-                    the Hotstar player UI.
-                  </p>
-                </div>
-              </div>
-              <div class="hotstar-step">
-                <span class="step-num">3</span>
-                <div>
-                  <strong>Rewind that moment instantly</strong>
-                  <p>
-                    Hit Back 10s or press the Left arrow key to replay the
-                    action &mdash; no fuss.
-                  </p>
-                </div>
+            <div class="hotstar-step">
+              <span class="step-num">3</span>
+              <div>
+                <strong>Rewind that moment instantly</strong>
+                <p>
+                  Hit Back 10s or press the Left arrow key to replay the
+                  action &mdash; no fuss.
+                </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="section section-tight" id="install">
-          <div class="section-head">
-            <p class="label">Install from ZIP</p>
-            <h2>Chrome needs the extracted folder, not the ZIP itself.</h2>
-          </div>
+      <section class="section section-tight" id="install">
+        <div class="section-head">
+          <p class="label">Install from ZIP</p>
+          <h2>Chrome needs the extracted folder, not the ZIP itself.</h2>
+        </div>
 
-          <div class="two-column">
-            <div class="card">
-              <ol class="steps">
-                <li>Click <strong>Download ZIP</strong> on this page.</li>
-                <li>Extract the ZIP into a normal folder on your computer.</li>
-                <li>Open <code>chrome://extensions</code> in Chrome.</li>
-                <li>
-                  Turn on <strong>Developer mode</strong> in the top-right.
-                </li>
-                <li>Click <strong>Load unpacked</strong>.</li>
-                <li>Select the extracted <strong>VeoPanel</strong> folder.</li>
-                <li>Optional: pin the extension for faster access.</li>
-              </ol>
-            </div>
-
-            <aside class="card note-card">
-              <strong>Important</strong>
-              <p>
-                VeoPanel is currently available as an early access manual
-                install. Chrome does not install extensions directly from a ZIP
-                file, so extracting first is the expected step until the Chrome
-                Web Store release is ready.
-              </p>
-            </aside>
-          </div>
-        </section>
-
-        <section class="section" id="use">
-          <div class="section-head">
-            <p class="label">How to Use</p>
-            <h2>Open a video page and use VeoPanel as your playback layer.</h2>
-          </div>
-
+        <div class="two-column">
           <div class="card">
             <ol class="steps">
-              <li>Open any webpage that contains an HTML5 video.</li>
-              <li>Click the VeoPanel extension icon in Chrome.</li>
-              <li>Use the popup to toggle the control panel on that page.</li>
+              <li>Click <strong>Download ZIP</strong> on this page.</li>
+              <li>Extract the ZIP into a normal folder on your computer.</li>
+              <li>Open <code>chrome://extensions</code> in Chrome.</li>
               <li>
-                Click <strong>Back 10s</strong>, <strong>Forward 10s</strong>,
-                or <strong>Play</strong>.
+                Turn on <strong>Developer mode</strong> in the top-right.
               </li>
-              <li>
-                Set a custom jump amount if you want bigger or smaller seek
-                steps.
-              </li>
-              <li>
-                Use the keyboard shortcuts while watching for faster control.
-              </li>
+              <li>Click <strong>Load unpacked</strong>.</li>
+              <li>Select the extracted <strong>VeoPanel</strong> folder.</li>
+              <li>Optional: pin the extension for faster access.</li>
             </ol>
           </div>
-        </section>
 
-        <section class="section" id="features">
-          <div class="section-head">
-            <p class="label">Features</p>
-            <h2>Focused on the controls that matter most.</h2>
+          <aside class="card note-card">
+            <strong>Important</strong>
+            <p>
+              VeoPanel is currently available as an early access manual
+              install. Chrome does not install extensions directly from a ZIP
+              file, so extracting first is the expected step until the Chrome
+              Web Store release is ready.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="use">
+        <div class="section-head">
+          <p class="label">How to Use</p>
+          <h2>Open a video page and use VeoPanel as your playback layer.</h2>
+        </div>
+
+        <div class="card">
+          <ol class="steps">
+            <li>Open any webpage that contains an HTML5 video.</li>
+            <li>Click the VeoPanel extension icon in Chrome.</li>
+            <li>Use the popup to toggle the control panel on that page.</li>
+            <li>
+              Click <strong>Back 10s</strong>, <strong>Forward 10s</strong>,
+              or <strong>Play</strong>.
+            </li>
+            <li>
+              Set a custom jump amount if you want bigger or smaller seek
+              steps.
+            </li>
+            <li>
+              Use the keyboard shortcuts while watching for faster control.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="section-head">
+          <p class="label">Features</p>
+          <h2>Focused on the controls that matter most.</h2>
+        </div>
+
+        <div class="feature-list">
+          <article class="card feature-item">
+            <h3>Floating control panel</h3>
+            <p>
+              Shows a compact overlay on pages with an HTML5 video element.
+            </p>
+          </article>
+          <article class="card feature-item">
+            <h3>Back and forward 10 seconds</h3>
+            <p>
+              Quick jumps for replaying lines, skipping filler, or correcting
+              missed moments.
+            </p>
+          </article>
+          <article class="card feature-item">
+            <h3>Play and pause</h3>
+            <p>
+              Keeps the main playback action easy to access even when the site
+              UI is poor.
+            </p>
+          </article>
+          <article class="card feature-item">
+            <h3>Custom jump amount</h3>
+            <p>
+              Change the skip interval instead of being locked to one fixed
+              seek step.
+            </p>
+          </article>
+          <article class="card feature-item">
+            <h3>Popup toggle</h3>
+            <p>
+              Enable the panel from the extension popup on the current page.
+            </p>
+          </article>
+          <article class="card feature-item">
+            <h3>Universal HTML5 support</h3>
+            <p>
+              Designed for standard web video players across sites, including
+              players that hide controls.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="hotkeys">
+        <div class="section-head">
+          <p class="label">Hotkeys</p>
+          <h2>Keyboard controls built into the current release.</h2>
+        </div>
+
+        <div class="card hotkeys">
+          <div class="hotkey-row hotkey-head">
+            <span>Key</span>
+            <span>Action</span>
           </div>
-
-          <div class="feature-list">
-            <article class="card feature-item">
-              <h3>Floating control panel</h3>
-              <p>
-                Shows a compact overlay on pages with an HTML5 video element.
-              </p>
-            </article>
-            <article class="card feature-item">
-              <h3>Back and forward 10 seconds</h3>
-              <p>
-                Quick jumps for replaying lines, skipping filler, or correcting
-                missed moments.
-              </p>
-            </article>
-            <article class="card feature-item">
-              <h3>Play and pause</h3>
-              <p>
-                Keeps the main playback action easy to access even when the site
-                UI is poor.
-              </p>
-            </article>
-            <article class="card feature-item">
-              <h3>Custom jump amount</h3>
-              <p>
-                Change the skip interval instead of being locked to one fixed
-                seek step.
-              </p>
-            </article>
-            <article class="card feature-item">
-              <h3>Popup toggle</h3>
-              <p>
-                Enable the panel from the extension popup on the current page.
-              </p>
-            </article>
-            <article class="card feature-item">
-              <h3>Universal HTML5 support</h3>
-              <p>
-                Designed for standard web video players across sites, including
-                players that hide controls.
-              </p>
-            </article>
+          <div class="hotkey-row">
+            <kbd>Left</kbd>
+            <span>Jump backward 10 seconds</span>
           </div>
-        </section>
-
-        <section class="section" id="hotkeys">
-          <div class="section-head">
-            <p class="label">Hotkeys</p>
-            <h2>Keyboard controls built into the current release.</h2>
+          <div class="hotkey-row">
+            <kbd>Right</kbd>
+            <span>Jump forward 10 seconds</span>
           </div>
+          <div class="hotkey-row">
+            <kbd>Space</kbd>
+            <span>Play or pause</span>
+          </div>
+        </div>
+      </section>
 
-          <div class="card hotkeys">
-            <div class="hotkey-row hotkey-head">
-              <span>Key</span>
-              <span>Action</span>
+      <section class="section section-tight">
+        <div class="section-head">
+          <p class="label">Planned Improvements</p>
+          <h2>
+            We will keep improving VeoPanel and launch it on the Chrome Web
+            Store soon.
+          </h2>
+        </div>
+
+        <div class="feature-list feature-list-small">
+          <article class="card feature-item">
+            <h3>Shortcut customization</h3>
+            <p>
+              Remap keys and tailor the panel to your own playback workflow.
+            </p>
+          </article>
+          <article class="card feature-item">
+            <h3>Better site handling</h3>
+            <p>
+              Improve reliability on edge-case players and streaming layouts.
+            </p>
+          </article>
+          <article class="card feature-item">
+            <h3>Cleaner popup UX</h3>
+            <p>
+              Make enablement and settings faster to understand at a glance.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <section class="section feedback-section" id="feedback">
+      <div class="feedback-card">
+        <div id="feedback-form-container">
+          <h2>Help us improve VeoPanel</h2>
+          <p class="lead">
+            Have a feature request, found a bug, or just want to say thanks?
+            We'd love to hear from you.
+          </p>
+
+          <form id="feedback-form">
+            <div class="form-group">
+              <label for="email">Email Address (Optional)</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" />
             </div>
-            <div class="hotkey-row">
-              <kbd>Left</kbd>
-              <span>Jump backward 10 seconds</span>
+            <div class="form-group">
+              <label for="message">Your Feedback</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Tell us what's on your mind..."
+                required></textarea>
             </div>
-            <div class="hotkey-row">
-              <kbd>Right</kbd>
-              <span>Jump forward 10 seconds</span>
-            </div>
-            <div class="hotkey-row">
-              <kbd>Space</kbd>
-              <span>Play or pause</span>
-            </div>
-          </div>
-        </section>
+            <button type="submit" class="button feedback-button">
+              Send Feedback
+            </button>
+          </form>
+        </div>
 
-        <section class="section section-tight">
-          <div class="section-head">
-            <p class="label">Planned Improvements</p>
-            <h2>
-              We will keep improving VeoPanel and launch it on the Chrome Web
-              Store soon.
-            </h2>
-          </div>
+        <div id="feedback-success" class="feedback-success">
+          <h3>Feedback Sent!</h3>
+          <p>
+            Thank you for your feedback. We read every message and will get
+            back to you if needed.
+          </p>
+          <button class="button button-secondary" style="margin-top: 20px" onclick="resetFeedbackForm()">
+            Send another
+          </button>
+        </div>
+      </div>
+    </section>
 
-          <div class="feature-list feature-list-small">
-            <article class="card feature-item">
-              <h3>Shortcut customization</h3>
-              <p>
-                Remap keys and tailor the panel to your own playback workflow.
-              </p>
-            </article>
-            <article class="card feature-item">
-              <h3>Better site handling</h3>
-              <p>
-                Improve reliability on edge-case players and streaming layouts.
-              </p>
-            </article>
-            <article class="card feature-item">
-              <h3>Cleaner popup UX</h3>
-              <p>
-                Make enablement and settings faster to understand at a glance.
-              </p>
-            </article>
-          </div>
-        </section>
-      </main>
+    <footer class="footer">
 
-      <footer class="footer">
-        <p><strong>VeoPanel</strong> by Bloc-Verse</p>
-        <p>
-          Early access release. Manual ZIP install for now, Chrome Web Store
-          launch soon.
-        </p>
-      </footer>
-    </div>
-    <script
-      data-goatcounter="https://veopanel.goatcounter.com/count"
-      async
-      src="//gc.zgo.at/count.js"
-    ></script>
-  </body>
+      <p><strong>VeoPanel</strong> by Bloc-Verse</p>
+      <p>
+        Early access release. Manual ZIP install for now, Chrome Web Store
+        launch soon.
+      </p>
+    </footer>
+  </div>
+  <script data-goatcounter="https://veopanel.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>
+    const feedbackForm = document.getElementById("feedback-form");
+    const formContainer = document.getElementById("feedback-form-container");
+    const successMessage = document.getElementById("feedback-success");
+
+    // Replace YOUR_FORMSPREE_ID with your actual Formspree Form ID
+    // To get one: 1. Sign up at Formspree.io 2. Create a form 3. Copy the ID from the endpoint URL
+    const FORMSPREE_ID = "mkokjoav";
+
+    feedbackForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const button = feedbackForm.querySelector("button");
+      const originalText = button.textContent;
+
+      button.disabled = true;
+      button.textContent = "Sending...";
+
+      const formData = new FormData(feedbackForm);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        if (FORMSPREE_ID === "YOUR_FORMSPREE_ID") {
+          throw new Error("Formspree ID is not configured.");
+        }
+
+        const response = await fetch(
+          `https://formspree.io/f/${FORMSPREE_ID}`,
+          {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          }
+        );
+
+        if (response.ok) {
+          formContainer.style.display = "none";
+          successMessage.style.display = "block";
+          feedbackForm.reset();
+        } else {
+          const errorData = await response.json();
+          throw new Error(errorData.error || "Problem submitting form");
+        }
+      } catch (error) {
+        console.error("Feedback error:", error);
+        if (FORMSPREE_ID === "YOUR_FORMSPREE_ID") {
+          alert("Configuration Error: Please replace 'YOUR_FORMSPREE_ID' in the code with your actual Formspree ID.");
+        } else {
+          alert("Oops! " + error.message);
+        }
+      } finally {
+        button.disabled = false;
+        button.textContent = originalText;
+      }
+    });
+
+    function resetFeedbackForm() {
+      formContainer.style.display = "block";
+      successMessage.style.display = "none";
+    }
+  </script>
+</body>
+
 </html>
