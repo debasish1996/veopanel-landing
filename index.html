@@ -4,11 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <title>VeoPanel by Bloc-Verse</title>
+
+    <!-- Primary SEO -->
+    <title>VeoPanel – Rewind Live Matches on Hotstar | Chrome Extension</title>
     <meta
       name="description"
-      content="VeoPanel is a Chrome extension by Bloc-Verse that adds a practical floating control panel to HTML5 video players."
+      content="VeoPanel is a free Chrome extension that adds a floating Back / Forward control panel to any HTML5 video. Perfect for Hotstar live matches where rewind is disabled — replay that six or wicket instantly."
     />
+    <meta
+      name="keywords"
+      content="VeoPanel, Hotstar rewind extension, Chrome extension video controls, seek disabled Hotstar, live match rewind Chrome, HTML5 video controller, Bloc-Verse"
+    />
+    <meta name="author" content="Bloc-Verse" />
+    <link rel="canonical" href="https://veopanel.blocverse.dev/" />
+
+    <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://veopanel.blocverse.dev/" />
+    <meta
+      property="og:title"
+      content="VeoPanel – Rewind Live Matches on Hotstar | Chrome Extension"
+    />
+    <meta
+      property="og:description"
+      content="Hotstar removes rewind during live matches. VeoPanel adds it back — a floating control panel for any HTML5 video in Chrome."
+    />
+    <meta
+      property="og:image"
+      content="https://veopanel.blocverse.dev/og-image.png"
+    />
+    <meta property="og:site_name" content="VeoPanel by Bloc-Verse" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="VeoPanel – Rewind Live Matches on Hotstar | Chrome Extension"
+    />
+    <meta
+      name="twitter:description"
+      content="Hotstar removes rewind during live matches. VeoPanel adds it back — a floating control panel for any HTML5 video in Chrome."
+    />
+    <meta
+      name="twitter:image"
+      content="https://veopanel.blocverse.dev/og-image.png"
+    />
+
+    <!-- Google Search / Indexing -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- JSON-LD Structured Data (SoftwareApplication) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "VeoPanel",
+        "operatingSystem": "Chrome",
+        "applicationCategory": "BrowserApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "VeoPanel is a free Chrome extension that adds a floating Back / Forward control panel to any HTML5 video page, including Hotstar live matches where seek controls are hidden.",
+        "url": "https://veopanel.blocverse.dev/",
+        "author": {
+          "@type": "Organization",
+          "name": "Bloc-Verse"
+        }
+      }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,6 +96,7 @@
         </a>
 
         <nav class="topnav" aria-label="Main navigation">
+          <a href="#hotstar">Hotstar Fix</a>
           <a href="#install">Install</a>
           <a href="#use">How to Use</a>
           <a href="#features">Features</a>
@@ -38,14 +106,17 @@
         <a
           class="button"
           href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip"
+          rel="noopener noreferrer"
           >Download ZIP</a
         >
       </header>
 
       <main id="top">
-        <section class="hero">
+        <section class="hero hero-compact">
           <div class="hero-copy">
-            <p class="label">Chrome extension for HTML5 video controls</p>
+            <p class="label">
+              Ad Free Chrome extension &middot; HTML5 video controls
+            </p>
             <div class="badge-row" aria-label="Release status">
               <span class="badge badge-primary">Early Access</span>
               <span class="badge">Manual ZIP Install</span>
@@ -53,50 +124,20 @@
             </div>
             <h1>VeoPanel adds back the controls some sites remove.</h1>
             <p class="lead">
-              It injects a floating panel on pages with an HTML5
-              <code>&lt;video&gt;</code> element so you can jump back, jump
-              forward, play, pause, and use keyboard shortcuts without relying
-              on the site's player UI.
+              A floating control panel for any HTML5 video &mdash; play, pause,
+              jump back and forward even when the site&rsquo;s player locks you
+              out.
             </p>
-            <p class="sublead">
-              This is an early access release. We are shipping direct downloads
-              first, with a Chrome Web Store launch planned soon while we keep
-              improving the extension and adding more features.
-            </p>
-
             <div class="hero-actions">
               <a
                 class="button"
                 href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip"
+                rel="noopener noreferrer"
                 >Download ZIP</a
               >
               <a class="button button-secondary" href="#install"
-                >Manual Install Guide</a
+                >Install Guide</a
               >
-            </div>
-
-            <div class="summary-grid">
-              <div class="summary-card">
-                <strong>Install</strong>
-                <span
-                  >Download ZIP, extract it, then use Load unpacked in
-                  Chrome.</span
-                >
-              </div>
-              <div class="summary-card">
-                <strong>Status</strong>
-                <span
-                  >Early access release with manual install for now and store
-                  launch coming soon.</span
-                >
-              </div>
-              <div class="summary-card">
-                <strong>Roadmap</strong>
-                <span
-                  >More controls, better site coverage, and ongoing polish are
-                  already planned.</span
-                >
-              </div>
             </div>
           </div>
 
@@ -132,6 +173,79 @@
 
               <div class="panel-status">Moved -10s | 278s / 1193046:28:16</div>
               <div class="panel-foot">Hotkeys: Left, Right, Space</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hotstar use-case callout -->
+        <section
+          class="section hotstar-section"
+          id="hotstar"
+          aria-labelledby="hotstar-heading"
+        >
+          <div class="hotstar-callout">
+            <div class="hotstar-text">
+              <p class="label">
+                Real-world problem &middot; Hotstar live matches
+              </p>
+              <h2 id="hotstar-heading">
+                Hotstar removes rewind during live matches. VeoPanel gives it
+                back.
+              </h2>
+              <p>
+                During live cricket and football on Hotstar, the player hides
+                the seek bar and disables forward&thinsp;/&thinsp;backward
+                scrubbing entirely. Miss a six, a wicket, or a last-minute goal?
+                You&rsquo;re stuck &mdash; there is no button to go back even a
+                few seconds.
+              </p>
+              <p>
+                VeoPanel bypasses the player UI entirely. It injects a draggable
+                floating panel straight onto the page with
+                <strong>Back 10s</strong>, <strong>Forward 10s</strong>, custom
+                jump amounts, and keyboard shortcuts &mdash; all working
+                independently of whatever controls Hotstar chooses to show or
+                hide.
+              </p>
+              <a
+                class="button"
+                href="https://github.com/debasish1996/video-control-chrome-ext/archive/refs/heads/master.zip"
+                rel="noopener noreferrer"
+                style="margin-top: 18px; display: inline-flex"
+                >Download &amp; fix it now</a
+              >
+            </div>
+            <div class="hotstar-steps">
+              <div class="hotstar-step">
+                <span class="step-num">1</span>
+                <div>
+                  <strong>Hotstar hides seek controls</strong>
+                  <p>
+                    The native player locks down rewind, forward, and scrubbing
+                    during any live stream.
+                  </p>
+                </div>
+              </div>
+              <div class="hotstar-step">
+                <span class="step-num">2</span>
+                <div>
+                  <strong>VeoPanel floats on top</strong>
+                  <p>
+                    A compact overlay panel appears on the page, independent of
+                    the Hotstar player UI.
+                  </p>
+                </div>
+              </div>
+              <div class="hotstar-step">
+                <span class="step-num">3</span>
+                <div>
+                  <strong>Rewind that moment instantly</strong>
+                  <p>
+                    Hit Back 10s or press the Left arrow key to replay the
+                    action &mdash; no fuss.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
