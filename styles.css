@@ -204,7 +204,6 @@ kbd {
 }
 
 .hero h1 {
-  max-width: 22ch;
   font-size: clamp(1.6rem, 3.2vw, 2.6rem);
 }
 
@@ -308,7 +307,7 @@ kbd {
   gap: 12px;
 }
 
-.two-up > * {
+.two-up>* {
   flex: 1 1 0;
 }
 
@@ -400,8 +399,7 @@ kbd {
 }
 
 .section-head h2 {
-  max-width: 18ch;
-  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+  font-size: clamp(1.5rem, 2.8vw, 1.6rem);
 }
 
 .two-column {
@@ -428,7 +426,7 @@ kbd {
   padding-left: 20px;
 }
 
-.steps li + li {
+.steps li+li {
   margin-top: 10px;
 }
 
@@ -463,7 +461,7 @@ kbd {
   padding: 16px 20px;
 }
 
-.hotkey-row + .hotkey-row {
+.hotkey-row+.hotkey-row {
   border-top: 1px solid var(--line-soft);
 }
 
@@ -504,7 +502,7 @@ kbd {
 /* ── Hotstar callout section ─────────────────────────────── */
 .hotstar-section {
   border-radius: var(--radius);
-  background: linear-gradient(135deg, rgba(109, 92, 246, 0.08) 0%, rgba(0,0,0,0) 60%);
+  background: linear-gradient(135deg, rgba(109, 92, 246, 0.08) 0%, rgba(0, 0, 0, 0) 60%);
   border: 1px solid rgba(109, 92, 246, 0.18);
   padding: 28px 28px 32px;
   margin-bottom: 8px;
@@ -522,7 +520,6 @@ kbd {
   font-size: clamp(1.3rem, 2.6vw, 2rem);
   line-height: 1.18;
   letter-spacing: -0.025em;
-  max-width: 26ch;
 }
 
 .hotstar-text p {
@@ -579,6 +576,7 @@ kbd {
 /* ─────────────────────────────────────────────────────────── */
 
 @media (max-width: 920px) {
+
   .hero,
   .two-column,
   .feature-list,
@@ -598,10 +596,6 @@ kbd {
     flex-wrap: wrap;
   }
 
-  .hero h1,
-  .section-head h2 {
-    max-width: none;
-  }
 
   .hero-panel {
     justify-content: flex-start;
@@ -609,22 +603,270 @@ kbd {
 }
 
 @media (max-width: 640px) {
+  body {
+    font-size: 0.85rem;
+  }
+
   .site {
-    width: min(calc(100% - 20px), var(--max-width));
+    width: min(calc(100% - 24px), var(--max-width));
   }
 
   .topbar {
-    padding-top: 18px;
+    padding: 10px 0 8px;
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-icon,
+  .panel-badge {
+    width: 26px;
+    height: 26px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  .brand-copy strong,
+  .panel-brand strong {
+    font-size: 0.85rem;
+  }
+
+  .brand-copy small,
+  .panel-brand small {
+    font-size: 0.75rem;
+    margin-top: 2px;
+  }
+
+  .topnav {
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+
+  .button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    border-radius: 8px;
   }
 
   .hero {
-    padding-top: 24px;
+    padding: 12px 0 8px;
+  }
+
+  .badge {
+    padding: 5px 8px;
+    font-size: 0.65rem;
+  }
+
+  .badge-primary {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .lead {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  .sublead {
+    font-size: 0.85rem;
+    margin-top: 8px;
+    line-height: 1.5;
+  }
+
+  .hero-actions {
+    gap: 8px;
+    margin: 16px 0 0;
+  }
+
+  .panel-window {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .panel-head {
+    margin-bottom: 12px;
+  }
+
+  .panel-toggle {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+  }
+
+  .panel-button {
+    min-height: 36px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+
+  .panel-button.primary {
+    margin-top: 10px;
+  }
+
+  .panel-input {
+    min-height: 40px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 0 12px;
+  }
+
+  .panel-block {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .panel-label {
+    font-size: 0.7rem;
+    margin-bottom: 6px;
+  }
+
+  .panel-status {
+    margin-top: 10px;
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+
+  .panel-foot {
+    margin-top: 8px;
+    font-size: 0.75rem;
+  }
+
+  .section {
+    padding: 18px 0;
+  }
+
+  .section-head {
+    margin-bottom: 10px;
+  }
+
+  .section-head h2 {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .hotstar-section {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .hotstar-text h2 {
+    font-size: 1.2rem;
+    margin: 6px 0 10px;
+  }
+
+  .hotstar-text p {
+    font-size: 0.85rem;
+    margin: 0 0 10px;
+  }
+
+  .hotstar-step {
+    gap: 10px;
+  }
+
+  .step-num {
+    width: 26px;
+    height: 26px;
+    font-size: 0.8rem;
+  }
+
+  .hotstar-step strong {
+    font-size: 0.85rem;
+  }
+
+  .hotstar-step p {
+    font-size: 0.8rem;
   }
 
   .hotkey-row {
     grid-template-columns: 1fr;
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  kbd {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    min-width: 50px;
+    border-radius: 6px;
+  }
+
+  .feedback-section {
+    padding: 24px 0;
+  }
+
+  .feedback-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .feedback-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .feedback-card .lead {
+    font-size: 0.85rem;
+    margin: 0 0 20px;
+  }
+
+  .form-group label {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    border-radius: 10px;
+  }
+
+  .footer {
+    padding: 16px 0 24px;
+    gap: 12px;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
+  }
+
+  .feature-list,
+  .feature-list-small {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding-bottom: 8px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .feature-list::-webkit-scrollbar,
+  .feature-list-small::-webkit-scrollbar {
+    display: none;
+  }
+
+  .feature-item {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
   }
 }
+
 /* ── Feedback Section ───────────────────────────────────── */
 .feedback-section {
   padding: 60px 0;
@@ -705,10 +947,4 @@ kbd {
 .feedback-success h3 {
   color: #10b981;
   margin-bottom: 12px;
-}
-
-@media (max-width: 640px) {
-  .feedback-card {
-    padding: 24px;
-  }
 }
